@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Button from "./Button";
 import Header from "./Header";
 import {AppContainer} from "./styled"
+import { connect } from 'react-redux'
 
-import '../styles/App.css';
 
 class App extends Component {
     render() {
@@ -16,5 +16,7 @@ class App extends Component {
         );
     }
 }
+
+
 
 export default App;
