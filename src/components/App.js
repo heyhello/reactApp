@@ -10,7 +10,7 @@ class App extends Component {
 
         return (
             <AppContainer>
-                <h1>My React App!</h1>
+                <h1>Exchange Converter</h1>
                 <Button />
                 <StyledInput/>
             </AppContainer>

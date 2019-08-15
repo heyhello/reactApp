@@ -1,6 +1,12 @@
 import { createStore } from 'redux';
 
 const InitialState = {
+    inputs: [
+        {type: "USD"},
+        {type: "BYN"}
+    ],
+    currentCurrency: "USD",
+    toEchangeCurrency: "BYN"
 
 
 }
