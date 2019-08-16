@@ -4,13 +4,14 @@ import Header from "./Header";
 import {AppContainer} from "./styled";
 import { connect } from 'react-redux';
 import StyledInput from "./Input";
-import MainPage from "./MainPage";
 
-class App extends Component {
+class WordAddForm extends Component {
     render() {
         return (
             <AppContainer>
-                <MainPage/>
+                <h1>Exchange Converter</h1>
+                <Button />
+                <StyledInput/>
             </AppContainer>
         );
     }
@@ -18,4 +19,4 @@ class App extends Component {
 
 
 
-export default App;
+export default WordAddForm;

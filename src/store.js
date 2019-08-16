@@ -6,12 +6,17 @@ const InitialState = {
         {type: "BYN"}
     ],
     currentCurrency: "USD",
-    toEchangeCurrency: "BYN"
-
+    toEchangeCurrency: "BYN",
+    headerItems: [
+        "English vocabulari",
+        "Russian vocabulari",
+        "Home state",
+        "Links and articles"
+    ]
 
 }
 
-function converter(state = {}, action) {
+function converter(state = InitialState , action) {
   if (action.type === 'CONVERT_IN_USD') {
     return [
       ...state,

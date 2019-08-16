@@ -1,20 +1,41 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { connect } from 'react-redux';
+import NavigationItem from "./NavigationItem"
 
-const StyledButton = styled.a`
-  color: #fff; 
-  text-decoration: none;
-  user-select: none; 
-  background: rgb(212,75,56);
-  padding: .7em 1.5em; 
-  outline: none; 
-
-  &:hover{background: rgb(232,95,76);}
-  &:active{background: rgb(152,15,0);}
+const StyledHeader = styled.div`
+  background-color: #fff; 
+    width: 100%;
+    height: 70px
 `
+const StyledNavigationBar = styled.ul`
+width: 70%;
+height: 100%;
+display: flex;
 
-const Button = (props) =>{
-    return (<StyledButton {...props}/>)
+`
+const Header = (props) => {
+
+    const {headerItems = []} = props;
+    return <StyledHeader> 
+    <StyledNavigationBar>
+        {headerItems.map((it, index) => {
+            return (
+                <NavigationItem key={index}>
+                    {it}
+                </NavigationItem>
+            )
+
+        })}
+    </StyledNavigationBar>
+     </StyledHeader> 
 }
 
-export default Button;
+const mapStateToProps = state => {
+    const {headerItems} = state;
+    return {
+        headerItems
+    }
+}
+
+export default connect(mapStateToProps)(Header);
